@@ -379,16 +379,16 @@ function Timer(){
 		if (Number(Math.floor(time / 100)) == 1)	document.documentElement.style.setProperty('--timerOne', `${-0}px`);
 		if (Number(Math.floor(time / 100)) == 0)	document.documentElement.style.setProperty('--timerOne', `${-320}px`);
 
-		if (Number(Math.floor(time / 10)) == 9)	document.documentElement.style.setProperty('--timerTwo', `${-284}px`);
-		if (Number(Math.floor(time / 10)) == 8)	document.documentElement.style.setProperty('--timerTwo', `${-248}px`);
-		if (Number(Math.floor(time / 10)) == 7)	document.documentElement.style.setProperty('--timerTwo', `${-213}px`);
-		if (Number(Math.floor(time / 10)) == 6)	document.documentElement.style.setProperty('--timerTwo', `${-177}px`);
-		if (Number(Math.floor(time / 10)) == 5)	document.documentElement.style.setProperty('--timerTwo', `${-142}px`);
-		if (Number(Math.floor(time / 10)) == 4) document.documentElement.style.setProperty('--timerTwo', `${-108}px`);
-		if (Number(Math.floor(time / 10)) == 3) document.documentElement.style.setProperty('--timerTwo', `${-72}px`);
-		if (Number(Math.floor(time / 10)) == 2) document.documentElement.style.setProperty('--timerTwo', `${-36}px`);
-		if (Number(Math.floor(time / 10)) == 1) document.documentElement.style.setProperty('--timerTwo', `${-0}px`);
-		if (Number(Math.floor(time / 10)) == 0) document.documentElement.style.setProperty('--timerTwo', `${-320}px`);
+		if ((Number(Math.floor(time / 10)) % 10) == 9)	document.documentElement.style.setProperty('--timerTwo', `${-284}px`);
+		if ((Number(Math.floor(time / 10)) % 10) == 8)	document.documentElement.style.setProperty('--timerTwo', `${-248}px`);
+		if ((Number(Math.floor(time / 10)) % 10) == 7)	document.documentElement.style.setProperty('--timerTwo', `${-213}px`);
+		if ((Number(Math.floor(time / 10)) % 10) == 6)	document.documentElement.style.setProperty('--timerTwo', `${-177}px`);
+		if ((Number(Math.floor(time / 10)) % 10) == 5)	document.documentElement.style.setProperty('--timerTwo', `${-142}px`);
+		if ((Number(Math.floor(time / 10)) % 10) == 4) document.documentElement.style.setProperty('--timerTwo', `${-108}px`);
+		if ((Number(Math.floor(time / 10)) % 10) == 3) document.documentElement.style.setProperty('--timerTwo', `${-72}px`);
+		if ((Number(Math.floor(time / 10)) % 10) == 2) document.documentElement.style.setProperty('--timerTwo', `${-36}px`);
+		if ((Number(Math.floor(time / 10)) % 10) == 1) document.documentElement.style.setProperty('--timerTwo', `${-0}px`);
+		if ((Number(Math.floor(time / 10)) % 10) == 0) document.documentElement.style.setProperty('--timerTwo', `${-320}px`);
 
 		if ((time % 10) == 9) document.documentElement.style.setProperty('--timerThree', `${-284}px`);
 		if ((time % 10) == 8) document.documentElement.style.setProperty('--timerThree', `${-248}px`);
