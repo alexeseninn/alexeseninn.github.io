@@ -367,6 +367,7 @@ function Timer(){
 	let countdown = setInterval(function() {
 		time++;
 		if (time == 999) time = 0;
+		if (gameOver) return;
 
 		if (Number(Math.floor(time / 100)) == 9)	document.documentElement.style.setProperty('--timerOne', `${-284}px`);
 		if (Number(Math.floor(time / 100)) == 8)	document.documentElement.style.setProperty('--timerOne', `${-248}px`);
