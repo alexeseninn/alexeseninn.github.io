@@ -218,7 +218,7 @@ const minesCounter = (num) => {
 const clickTile = (tile) => {
 	let coordinate = tile.getAttribute('data-tile');
 	if (gameOver) return;
-	if (tile.classList.contains('tile--checked') || tile.classList.contains('tile--flagged')) return;
+	if (tile.classList.contains('tile--checked') || tile.classList.contains('tile--flagged') || tile.classList.contains('tile--marked')) return;
 	if (bombs.includes(coordinate)) { //если это бомба
 		endGame(tile);
 		} else {
@@ -327,7 +327,11 @@ const endGame = (tile) => {
 			if (tile.classList.contains('tile--flagged')){
 				tile.classList.remove('tile--flagged');
 				tile.classList.add('tile--defused');
-			} else tile.classList.add('tile--bomb');
+			} else if (tile.classList.contains('tile--marked')){
+				tile.classList.remove('tile--marked');
+				tile.classList.add('tile--defused');
+			} 
+			else tile.classList.add('tile--bomb');
 		}
 	});
 }
